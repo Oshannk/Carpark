@@ -47,7 +47,11 @@
 
     <!--===============================================================================================-->
 
+    <?php
 
+include('session.php');
+
+?>
 
 </head>
 
@@ -65,7 +69,7 @@
 						</span>
 
                         <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-                            <input class="input100" type="text" name="username" id="username" placeholder="YourName" requried="requried">
+                            <input class="input100" type="text" name="username" id="username" placeholder="YourName">
                             <span class="focus-input100"></span>
                         </div>
 
@@ -93,20 +97,17 @@
                             <span class="focus-input100"></span>
                         </div>
                         <br />
-                        <br />
-                       
-                        <div class="container-login100-form-btn">
+                          <div class="container-login100-form-btn">
                             <button class="login100-form-btn" type="submit">
 								Reservation
 							</button>
                         </div>
-
                         <div class="flex-col-c p-t-170 p-b-40">
                             <span class="txt1 p-b-9">
-								
+								Do you need to go to ParkingSlot?
 							</span>
 
-                            <a href="login.php" class="txt3">
+                            <a href="index.php" class="txt3">
 								Dashboard
 							</a>
                         </div>
