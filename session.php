@@ -15,7 +15,7 @@ $sql = $conn->query("SELECT username ,number, password FROM users WHERE username
 $row = $sql->fetch_assoc();
 $login_session = $row['username'];
 $_SESSION['v_number'] = $row['number'];
-echo $login_session;
+//echo $login_session;
 if (!isset($login_session)) {
     mysqli_close($conn); // Closing Connection
     header('Location: login.php'); // Redirecting To Home Page

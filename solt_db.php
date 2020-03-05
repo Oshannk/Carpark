@@ -1,16 +1,7 @@
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "1234";
-$dbname = "carpark";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include("connectDB.php");
 
 
 $sql = "SELECT Availability FROM slots";
@@ -157,3 +148,5 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 //echo jason_enode($a);
+
+?>
