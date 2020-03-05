@@ -10,11 +10,12 @@ session_start(); // Starting Session
 // Storing Session
 $user_check = $_SESSION['login_user'];
 // SQL Query To Fetch Complete Information Of User
-$sql = $conn->query("SELECT username , password FROM users WHERE username = '$user_check' ");
+$sql = $conn->query("SELECT username ,number, password FROM users WHERE username = '$user_check' ");
 //$row = mysql_fetch_assoc($sql);
 $row = $sql->fetch_assoc();
 $login_session = $row['username'];
-echo $login_session;
+$_SESSION['v_number'] = $row['number'];
+//echo $login_session;
 if (!isset($login_session)) {
     mysqli_close($conn); // Closing Connection
     header('Location: login.php'); // Redirecting To Home Page

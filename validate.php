@@ -44,7 +44,7 @@
 				text: 'Wrong Username or Password !!!  ',
 
 			})
-			var delayInMilliseconds = 5000; //1 second
+			var delayInMilliseconds = 3000; //1 second
 
 			setTimeout(function() {
 				window.location.href = 'login.php';
