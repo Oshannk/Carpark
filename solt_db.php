@@ -15,6 +15,10 @@ if ($conn->connect_error) {
 $sql = "SELECT Availability FROM slots";
 $result = $conn->query($sql);
 
+
+
+
+
 if ($result->num_rows > 0) {
   // output data of each row
   $a = array();
@@ -117,7 +121,7 @@ if ($result->num_rows > 0) {
   echo '<div class="column" style="background-color:#aaa; border-radius: 3%;">';
   echo '<h2>SLOT 01</h2>';
   echo '<p>=========</p>';
-  echo '<img src="' . $row_1 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> ';
+  echo '<a href="reservation.php" > <img src="' . $row_1 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
 
   echo '</div>';
   echo '<div class="column" style="background-color:#bbb; border-radius: 3%;">';
