@@ -55,10 +55,11 @@ include('session.php');
 </script>
 
 <body class="body">
+
   <h3 align="center">==========CAR PARKING SLOTS==========</h3>
 
   <div class="table-responsive-lg">
-    
+      
       <div id="station_data"></div>
     
   </div>
