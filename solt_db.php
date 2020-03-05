@@ -123,13 +123,13 @@ if ($result->num_rows > 0) {
   echo '<div class="column" style="background-color:#aaa; border-radius: 3%;">';
   echo '<h2>SLOT 01</h2>';
   echo '<p>=========</p>';
-  echo '<a  href = "#" onclick=PWerror("'.$row_1.'")> <img src="' . $row_1 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
+  echo '<a  href = "#" onclick=BookingAlert("'.$row_1.'")> <img src="' . $row_1 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
 
   echo '</div>';
   echo '<div class="column" style="background-color:#bbb; border-radius: 3%;">';
   echo '<h2>SLOT 02</h2>';
   echo '<p>=========</p>';
-  echo '<a href = "#" onclick=PWerror("'.$row_2.'")><img src="' . $row_2 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
+  echo '<a href = "#" onclick=BookingAlert("'.$row_2.'")><img src="' . $row_2 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
   echo '</div>';
   echo '</div>';
 
@@ -138,13 +138,13 @@ if ($result->num_rows > 0) {
   echo '<div class="column" style="background-color:#ccc; border-radius: 3%;">';
   echo '<h2>SLOT 03</h2>';
   echo '<p>=========</p>';
-  echo '<a href = "#" onclick=PWerror("'.$row_3.'")><img src="' . $row_3 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
+  echo '<a href = "#" onclick=BookingAlert("'.$row_3.'")><img src="' . $row_3 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
   echo '</div>';
 
   echo '<div class="column" style="background-color:#ddd; border-radius: 3%;">';
   echo '<h2>SLOT 04</h2>';
   echo '<p>=========</p>';
-  echo '<a href = "#" onclick=PWerror("'.$row_4.'")><img src="' . $row_4 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
+  echo '<a href = "#" onclick=BookingAlert("'.$row_4.'")><img src="' . $row_4 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
   echo '</div>';
   echo '</div>';
   echo '</div>';

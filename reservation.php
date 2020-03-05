@@ -20,7 +20,16 @@
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 
     <script src="sweetalert2.min.js"></script>
-
+    <script>
+        function load(){
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date123").value = m + "/" + d + "/" + y;
+        }
+        
+    </script>
 
 
     <!--===============================================================================================-->
@@ -56,7 +65,7 @@ include('session.php');
 </head>
 
 
-<body>
+<body onload="load()">
 
     <div class="limiter">
         <div class="wrapper animated bounceInLeft">
@@ -69,7 +78,7 @@ include('session.php');
 						</span>
 
                         <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-                            <input class="input100" type="text" name="username" id="username" placeholder="YourName">
+                           <?php echo "<input class='input100' type='text' name='username' id='username' value='".$_SESSION['login_user']."' placeholder='YourName' disabled>"; ?>
                             <span class="focus-input100"></span>
                         </div>
 
@@ -79,12 +88,12 @@ include('session.php');
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Vehicle Number">
-                            <input class="input100" type="text" name="number" id="number" placeholder="Vehicle Number">
+                            <?php echo "<input class='input100' type='text' name='number' id='number' value='".$_SESSION['v_number']."' placeholder='Vehicle Number' disabled>"; ?> 
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-16" data-validate="Date">
-                            <input class="input100" type="text" name="date" id="date" placeholder="Date">
+                            <input class="input100" type="text" name="date" id="date123" placeholder="Date" disabled>
                             <span class="focus-input100"></span>
                         </div>
                         
