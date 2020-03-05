@@ -1,3 +1,4 @@
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -88,6 +89,7 @@ if ($result->num_rows > 0) {
   echo '<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />';
   echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
   echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>';
+  echo '<script src="js/alert.js"></script>';
   echo '<br />';
   echo '<br />';
   echo '<br />';
@@ -121,13 +123,13 @@ if ($result->num_rows > 0) {
   echo '<div class="column" style="background-color:#aaa; border-radius: 3%;">';
   echo '<h2>SLOT 01</h2>';
   echo '<p>=========</p>';
-  echo '<a href="reservation.php" > <img src="' . $row_1 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
+  echo '<a  href = "#" onclick=PWerror("'.$row_1.'")> <img src="' . $row_1 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
 
   echo '</div>';
   echo '<div class="column" style="background-color:#bbb; border-radius: 3%;">';
   echo '<h2>SLOT 02</h2>';
   echo '<p>=========</p>';
-  echo '<img src="' . $row_2 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> ';
+  echo '<a href = "#" onclick=PWerror("'.$row_2.'")><img src="' . $row_2 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
   echo '</div>';
   echo '</div>';
 
@@ -136,13 +138,13 @@ if ($result->num_rows > 0) {
   echo '<div class="column" style="background-color:#ccc; border-radius: 3%;">';
   echo '<h2>SLOT 03</h2>';
   echo '<p>=========</p>';
-  echo '<img src="' . $row_3 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> ';
+  echo '<a href = "#" onclick=PWerror("'.$row_3.'")><img src="' . $row_3 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
   echo '</div>';
 
   echo '<div class="column" style="background-color:#ddd; border-radius: 3%;">';
   echo '<h2>SLOT 04</h2>';
   echo '<p>=========</p>';
-  echo '<img src="' . $row_4 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> ';
+  echo '<a href = "#" onclick=PWerror("'.$row_4.'")><img src="' . $row_4 . '" class="img-thumbnail" alt="newPic" width="100" height="32" style="border-radius: 4%"> </a>';
   echo '</div>';
   echo '</div>';
   echo '</div>';
