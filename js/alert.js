@@ -1,7 +1,7 @@
 function PWerror(vall) {
 
      
-      "   alert(document.getElementById(vall).value);"
+      alert(document.getElementById(vall).value);
       
 			const swalWithBootstrapButtons = Swal.mixin({
   customClass: {
