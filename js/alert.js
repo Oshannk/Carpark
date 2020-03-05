@@ -1,9 +1,7 @@
 function PWerror(vall) {
-
      
-      alert(document.getElementById(vall).value);
-      
-			const swalWithBootstrapButtons = Swal.mixin({
+      if(vall == "car.png"){
+      			const swalWithBootstrapButtons = Swal.mixin({
   customClass: {
     confirmButton: 'btn btn-success',
     cancelButton: 'btn btn-danger'
@@ -38,3 +36,4 @@ swalWithBootstrapButtons.fire({
   }
 })
 		}
+}
