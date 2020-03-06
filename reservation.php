@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Registration</title>
+    <title>Reservation</title>
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -93,7 +93,7 @@ include('session.php');
                         </div>
                         
                         <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Telephone Number">
-                            <input class="input100" type="text" name="tp" id="tp" placeholder="Telephone">
+                            <input class="input100" type="text" name="phone" id="phone" placeholder="Telephone">
                             <span class="focus-input100"></span>
                         </div>
                         <div class="container">
@@ -102,21 +102,29 @@ include('session.php');
                         <div class="form-group col-md-6">
                         <label for="inputState" ><Strong>Start Time</Strong></label>
                         <select id="inputState" class="form-control">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
+                        <option value="1">09.00 AM</option>
+                        <option value="2">10.00 AM</option>
+                        <option value="3">11.00 AM</option>
+                        <option value="4">12.00 PM</option>
+                        <option value="5">13.00 PM</option>
+                        <option value="6">14.00 PM</option>
+                        <option value="7">15.00 PM</option>
+                        <option value="8">16.00 PM</option>
+                        <option value="9">17.00 PM</option>
                         </select>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="inputState" ><Strong>End Time</Strong></label>
                         <select id="inputState" class="form-control">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
+                        <option value="1">10.00 AM</option>
+                        <option value="2">11.00 AM</option>
+                        <option value="3">12.00 PM</option>
+                        <option value="4">13.00 PM</option>
+                        <option value="5">14.00 PM</option>
+                        <option value="6">15.00 PM</option>
+                        <option value="7">16.00 PM</option>
+                        <option value="8">17.00 PM</option>
+                        <option value="9">18.00 PM</option>
                         </select>
                         </div>
                         </div>
