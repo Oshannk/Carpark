@@ -45,20 +45,7 @@
 	$posted = false;
 	if ($_POST) {
 		$posted = true;
-
-		$servername = "localhost";
-		$username = "root";
-		$password = "1234";
-		$dbname = "carpark";
-
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-		// Check connection
-		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		}
-
-
+		include("connectDB.php");
 		if ($_POST["password"] === $_POST["cpassword"]) {
 			$_POST["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
 			//$_POST["cpassword"] = password_hash($_POST["cpassword"], PASSWORD_DEFAULT);
@@ -79,7 +66,7 @@
 		$conn->close();
 	}
 	?>
-	
+
 </body>
 
 </html>

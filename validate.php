@@ -57,14 +57,7 @@
 <body>
 	<?php
 	session_start(); // Starting Session
-	$servername = "localhost";
-	$username = "root";
-	$password = "1234";
-	$dbname = "carpark";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-
+	include("connectDB.php");
 	$uname = $conn->real_escape_string($_POST['username']);
 	$pw = $conn->real_escape_string($_POST['password']);
 

@@ -1,16 +1,8 @@
 
 <?php
-
 include("connectDB.php");
-
-
 $sql = "SELECT Availability FROM slots";
 $result = $conn->query($sql);
-
-
-
-
-
 if ($result->num_rows > 0) {
   // output data of each row
   $a = array();
