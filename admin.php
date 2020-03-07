@@ -108,7 +108,7 @@ include('session.php');
             include('user_db.php');
             echo '<tbody>';
 
-            for ($i = 0; $i < $row_numbers; $i++) {
+            for ($i = 1; $i < $row_numbers; $i++) {
 
               echo '<tr>';
               echo '<th scope="row">' . $i . '</th>';
@@ -141,6 +141,80 @@ include('session.php');
       <script type="text/javascript">
         $(document).ready(function() {
           $('#tbid').DataTable({
+            scrollY: "500px",
+            
+          });
+        });
+      </script>
+    </div>
+
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <div class="row">
+    <div class="col">
+      <h3 align="center">==========BOOKING DETAILS==========</h3>
+      <div class="table-responsive"> 
+        <div class="container">
+          <table id="tbid1" class="table table-striped" style=" margin:auto">
+
+            <thead>
+              <tr style="background-color: #A9A9A9;">
+                <th scope="col">#</th>
+                <th scope="col">Username</th>
+                <th scope="col">Vehicle Number</th>
+                <th scope="col">Date</th>
+                <th scope="col">Telephone</th>
+                <th scope="col">Start Time</th>
+                <th scope="col">End Time</th>
+                <th scope="col">Slot</th>
+
+              </tr>
+            </thead>
+
+            <?php
+            include('booking_db.php');
+            echo '<tbody>';
+
+            for ($i = 1; $i < $row_numbers; $i++) {
+
+              echo '<tr>';
+              echo '<th scope="row">' . $i . '</th>';
+              echo '<td>' . $a[$i] . '</td>';
+              echo '<td>' . $b[$i] . '</td>';
+              echo '<td>' . $c[$i] . '</td>';
+              echo '<td>' . $d[$i] . '</td>';
+              echo '<td>' . $e[$i] . '</td>';
+              echo '<td>' . $f[$i] . '</td>';
+              echo '<td>' . $g[$i] . '</td>';
+
+              echo '</tr>';
+            }
+
+            ?>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div>
+      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('#tbid1').DataTable({
             scrollY: "500px",
             
           });
