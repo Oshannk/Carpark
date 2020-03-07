@@ -26,7 +26,7 @@
             y = n.getFullYear();
             m = n.getMonth() + 1;
             d = n.getDate();
-            document.getElementById("date123").value = m + "/" + d + "/" + y;
+            document.getElementById("date123").value = y + "-" + m + "-" + d;
         }
         
     </script>
@@ -78,22 +78,22 @@ include('session.php');
 						</span>
 
                         <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-                           <?php echo "<input class='input100' type='text' name='username' id='username' value='".$_SESSION['login_user']."' placeholder='YourName' disabled>"; ?>
+                           <?php echo "<input class='input100' type='text' name='username' id='username' value='".$_SESSION['login_user']."' placeholder='YourName' readonly>"; ?>
                             <span class="focus-input100"></span>
                         </div>
                         
                         <div class="wrap-input100 validate-input m-b-16" style="z-index:1" data-validate="Please enter Vehicle Number">
-                            <?php echo "<input class='input100' type='text' name='number' id='number' value='".$_SESSION['v_number']."' placeholder='Vehicle Number' disabled>"; ?> 
+                            <?php echo "<input class='input100' type='text' name='number' id='number' value='".$_SESSION['v_number']."' placeholder='Vehicle Number' readonly>"; ?> 
                             <span class="focus-input100"></span>
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-16" data-validate="Date">
-                            <input class="input100" type="text" name="date" id="date123" placeholder="Date" disabled>
+                            <input class="input100" type="text" name="date" id="date123" placeholder="Date" readonly>
                             <span class="focus-input100"></span>
                         </div>
                         
                         <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Telephone Number">
-                            <input class="input100" type="text" name="phone" id="phone" placeholder="Telephone">
+                            <input class="input100" type="number" name="phone" id="phone" placeholder="Telephone">
                             <span class="focus-input100"></span>
                         </div>
                         <div class="container">
@@ -101,30 +101,30 @@ include('session.php');
                         
                         <div class="form-group col-md-6">
                         <label for="inputState" ><Strong>Start Time</Strong></label>
-                        <select id="inputState" class="form-control">
-                        <option value="1">09.00 AM</option>
-                        <option value="2">10.00 AM</option>
-                        <option value="3">11.00 AM</option>
-                        <option value="4">12.00 PM</option>
-                        <option value="5">13.00 PM</option>
-                        <option value="6">14.00 PM</option>
-                        <option value="7">15.00 PM</option>
-                        <option value="8">16.00 PM</option>
-                        <option value="9">17.00 PM</option>
+                        <select id="inputState" class="form-control" name="start_time">
+                        <option value="09">09.00 AM</option>
+                        <option value="10">10.00 AM</option>
+                        <option value="11">11.00 AM</option>
+                        <option value="12">12.00 PM</option>
+                        <option value="13">13.00 PM</option>
+                        <option value="14">14.00 PM</option>
+                        <option value="15">15.00 PM</option>
+                        <option value="16">16.00 PM</option>
+                        <option value="17">17.00 PM</option>
                         </select>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="inputState" ><Strong>End Time</Strong></label>
-                        <select id="inputState" class="form-control">
-                        <option value="1">10.00 AM</option>
-                        <option value="2">11.00 AM</option>
-                        <option value="3">12.00 PM</option>
-                        <option value="4">13.00 PM</option>
-                        <option value="5">14.00 PM</option>
-                        <option value="6">15.00 PM</option>
-                        <option value="7">16.00 PM</option>
-                        <option value="8">17.00 PM</option>
-                        <option value="9">18.00 PM</option>
+                        <select id="inputState" class="form-control" name="end_time">
+                        <option value="10">10.00 AM</option>
+                        <option value="11">11.00 AM</option>
+                        <option value="12">12.00 PM</option>
+                        <option value="13">13.00 PM</option>
+                        <option value="14">14.00 PM</option>
+                        <option value="15">15.00 PM</option>
+                        <option value="16">16.00 PM</option>
+                        <option value="17">17.00 PM</option>
+                        <option value="18">18.00 PM</option>
                         </select>
                         </div>
                         </div>
@@ -134,7 +134,7 @@ include('session.php');
 
                         <div class="form-group col-md-12">
                         <label for="inputState" ><Strong>Select Slot Number</Strong></label>
-                        <select id="inputState" class="form-control">
+                        <select id="inputState" class="form-control" name="slots">
                         <?php 
                             include("connectDB.php");
                             $sql = "select Name from slots where Availability = 'Yes' ";
