@@ -108,7 +108,7 @@ include('session.php');
             include('user_db.php');
             echo '<tbody>';
 
-            for ($i = 0; $i < $row_numbers; $i++) {
+            for ($i = 1; $i < $row_numbers; $i++) {
 
               echo '<tr>';
               echo '<th scope="row">' . $i . '</th>';
@@ -179,7 +179,7 @@ include('session.php');
             include('booking_db.php');
             echo '<tbody>';
 
-            for ($i = 0; $i < $row_numbers; $i++) {
+            for ($i = 1; $i < $row_numbers; $i++) {
 
               echo '<tr>';
               echo '<th scope="row">' . $i . '</th>';
