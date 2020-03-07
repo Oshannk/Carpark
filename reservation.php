@@ -28,6 +28,27 @@
             d = n.getDate();
             document.getElementById("date123").value = y + "-" + m + "-" + d;
         }
+
+        function timeSelect(){
+
+            var sel = document.getElementById('inputState1');
+            var sel2 = document.getElementById('inputState2');
+            var op = sel.getElementsByTagName("option");
+            var op2 = sel2.getElementsByTagName("option");
+
+            for (var i = 0; i < op.length; i++) 
+            {
+                op[i].disabled = false;
+                op2[i].disabled = false;
+            }
+
+            sel2.selectedIndex = sel.selectedIndex;
+            
+            for (var i = 0; i < sel.selectedIndex; i++) 
+            {
+                op2[i].disabled = true;
+            }
+        }
         
     </script>
 
@@ -101,7 +122,7 @@ include('session.php');
                         
                         <div class="form-group col-md-6">
                         <label for="inputState" ><Strong>Start Time</Strong></label>
-                        <select id="inputState" class="form-control" name="start_time">
+                        <select id="inputState1" onchange = "timeSelect()" class="form-control" name="start_time">
                         <option value="09">09.00 AM</option>
                         <option value="10">10.00 AM</option>
                         <option value="11">11.00 AM</option>
@@ -115,7 +136,7 @@ include('session.php');
                         </div>
                         <div class="form-group col-md-6">
                         <label for="inputState" ><Strong>End Time</Strong></label>
-                        <select id="inputState" class="form-control" name="end_time">
+                        <select id="inputState2" class="form-control" name="end_time">
                         <option value="10">10.00 AM</option>
                         <option value="11">11.00 AM</option>
                         <option value="12">12.00 PM</option>
